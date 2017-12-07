@@ -1,10 +1,10 @@
 class ApplicationController < Sinatra::Base
-  set :views, Proc.new { File.join(root, "../views/") }
 
   configure do
     set :public_folder, 'public'
+    set :views, 'app/views'
     enable :sessions
-    set :session_secret, "auth_demo_lv"
+    set :session_secret, 'auth_demo_lv'
   end
 
     get '/' do
